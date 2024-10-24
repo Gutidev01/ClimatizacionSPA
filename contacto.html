@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Asegúrate de enlazar el CSS -->
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div id="navbar"></div>
+    </header>
+
+    <!-- Sección de Contacto -->
+    <section class="contact-section">
+        <div class="contact-container">
+            
+            <div class="contact-content">
+                <div class="contact-form">
+                    <h3>Consulta en Línea</h3>
+                    <form>
+                        <input type="text" placeholder="Nombre" required>
+                        <input type="email" placeholder="Email" required>
+                        <input type="tel" placeholder="Teléfono" required>
+                        <select>
+                            <option value="" disabled selected>Motivo de contacto</option>
+                            <option value="servicio1">Solicitar instalación</option>
+                            <option value="servicio2">Solicitar mantención</option>
+                            <option value="servicio3">Solicitar remoción</option>
+                            <option value="servicio4">Solicitar reparación</option>
+                        </select>
+                        <textarea placeholder="Mensaje" rows="5" required></textarea>
+                        <button type="submit" class="btn-primary">Enviar</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <h3>Detalles de Contacto</h3>
+                    <p>Email: contacto@sclima.com</p>
+                    <p>Teléfono: (123) 456-7890</p>
+                    <h4>Oficinas</h4>
+                    <p>Dirección 1</p>
+                    <p>Dirección 2</p>
+                    <p>Dirección 3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer -->
+   <div id="footer"></div>
+
+    <!-- JavaScript -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>

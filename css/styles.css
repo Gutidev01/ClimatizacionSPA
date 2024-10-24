@@ -1,0 +1,584 @@
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+  background-color: #ffcc33;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: center;  /* Centramos todo el contenido horizontalmente */
+  align-items: center;  /* Centramos el contenido verticalmente */
+  background-color: #ffcc33;
+  padding: 10px 30px;  /* Ajustamos el padding para hacerlo más compacto */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;  /* Alineamos verticalmente los elementos del menú */
+}
+
+nav ul li {
+  margin: 0 20px;  /* Espaciamos los enlaces */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #003366;
+  font-weight: bold;
+}
+
+/* Ajustar el logo en el centro */
+nav .logo {
+  margin: 0 20px;  /* Espacio a los lados del logo para distribuir bien los enlaces */
+}
+
+header img.logo {
+  max-width: 150px;  /* Ajustar el tamaño del logo */
+  border-radius: 10px;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+.centroweb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 25px;
+  padding-left: 100px;
+}
+
+.centroweb-content {
+  max-width: 50%;
+}
+
+.centroweb h1 {
+  color: #003366;
+  font-size: 2.5rem;
+}
+
+.centroweb p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.centroweb-image img {
+  width: 1300px;
+  height: 500px;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: #003366;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Services Section */
+.services {
+  padding: 50px 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.services h2 {
+  color: #003366;
+}
+
+.service-items {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.service-item {
+  background-color: #ffcc33;
+  color: #003366;
+  padding: 20px;
+  border-radius: 10px;
+  width: 30%;
+}
+
+/* Accordion (Sección de Servicios) */
+.servicios {
+  padding: 50px;
+  background-color: #fff;
+}
+
+.servicios h2 {
+  text-align: center;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.accordion {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+.accordion-button {
+  background-color: #003366;
+  color: white;
+  padding: 15px;
+  border: none;
+  text-align: left;
+  width: 100%;
+  cursor: pointer;
+}
+
+.accordion-button.active, .accordion-button:hover {
+  background-color: #ffcc33;
+  color: #003366;
+}
+
+.accordion-content {
+  max-height: 0;  /* Inicia colapsado */
+  overflow: hidden;  /* Oculta el contenido que excede el max-height */
+  transition: max-height 0.4s ease;  /* Aplica la transición suave */
+  padding: 0 15px;
+  color: #333;
+}
+
+.accordion-content p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+/* Estilos del footer adaptado */
+/* El footer siempre estará fijo en la parte inferior de la pantalla */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  padding: 10px; /* Reduce el padding para hacerlo más pequeño */
+  height: 100px;  /* Establece una altura más pequeña */
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  
+}
+
+footer .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+footer .col-3, .col-6 {
+  padding: 10px;
+}
+
+footer .footer-title {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+footer .instagram-photos img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;         
+  padding: 5px;             
+  background-color: white;   
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  
+  transition: transform 0.3s ease;  
+}
+
+footer .instagram-photos img:hover {
+  transform: scale(1.1); 
+}
+
+footer .m-0 {
+  margin: 0;
+}
+
+footer .letrachica {
+  font-size: 0.8rem;
+}
+
+footer .footer-link {
+  color: #ffcc33;
+  text-decoration: none;
+}
+
+footer .footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Sección de Información adicional */
+.informacion {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffcc33;
+}
+
+.info-content h3 {
+  color: #003366;
+}
+
+.info-content ul {
+  list-style: none;
+  padding: 0;
+  color: #333;
+}
+
+.info-image img {
+  max-width: 100%;
+  height: 175px;
+  padding-bottom: 110px;
+  padding-top: 10px;
+}
+.nosotros {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 100px;
+  padding-left: 100px;
+}
+.nosotros-content {
+  max-width: 50%;
+}
+.nosotros h1 {
+  color: #003366;
+  font-size: 3.5rem;
+}
+
+.nosotros p {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.nosotros-image img {
+  width: auto;
+  height: 500px;
+  border-radius: 25px;
+}
+/* Estilos para el botón de usuario (Iniciar sesión) */
+.user-button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 180px;  /* Establece un ancho fijo para ambos botones */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.user-button i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Estilos para el botón de registrarse */
+.register-button {
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 180px;  /* Asegura el mismo ancho para el botón de registro */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  z-index: 1000;
+}
+
+.register-button i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Hover para ambos botones */
+.user-button:hover, .register-button:hover {
+  transform: scale(1.05); 
+}
+
+.user-button:hover {
+  background-color: #005599;
+}
+
+.register-button:hover {
+  background-color: #1C569B;
+}
+/* Sección de Login */
+.login-section {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.login-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-title h1 {
+  color: #003366;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.login-form {
+  width: 100%;
+  text-align: left;
+}
+
+.login-form h3 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.login-remember {
+  display: flex;
+  align-items: center; /* Alinea el checkbox y el texto verticalmente en el centro */
+  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+  margin-bottom: 10px;
+}
+
+.login-remember input {
+  margin-right: 10px; /* Espacio entre el checkbox y la etiqueta */
+  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+}
+
+.forgot-password {
+  color: #003366;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+.login-form button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Botón ancho */
+}
+
+.login-form button:hover {
+  background-color: #002244;
+}
+
+/* Sección de Contacto */
+.contact-section {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact-form {
+  width: 60%;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h3 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+.contact-details {
+  width: 35%;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact-details h3,
+.contact-details h4 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 10px;
+}
+
+.contact-details p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Botón de envío */
+.contact-form .btn-primary {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #002244;
+}
+/* Sección de Registro */
+.register-section {
+  padding: 50px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.register-container {
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 40px;
+  padding-bottom: 150px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.register-title h1 {
+  color: #003366;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.register-form {
+  width: 100%;
+  text-align: left;
+}
+
+.register-form h3 {
+  font-size: 1.5rem;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.register-form input,
+.register-form select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.register-form input[type="date"] {
+  padding: 10px;
+}
+
+.register-form button {
+  background-color: #003366;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Botón ancho */
+}
+
+.register-form button:hover {
+  background-color: #002244;
+}
+
+
