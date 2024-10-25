@@ -1,584 +1,670 @@
 /* Estilos generales */
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+  font-family: 'Arial', sans-serif;  /* Fuente de texto general */
+  margin: 0;  /* Elimina el margen por defecto */
+  padding: 0;  /* Elimina el relleno por defecto */
+  background-color: #f4f4f4;  /* Color de fondo gris claro */
 }
 
 /* Header */
 header {
-  background-color: #ffcc33;
-  text-align: center;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background-color: #ffcc33;  /* Fondo color amarillo */
+  text-align: center;  /* Alinea el contenido del encabezado al centro */
+  position: sticky;  /* Fija el encabezado en la parte superior al hacer scroll */
+  top: 0;  /* Mantiene el header en la parte superior de la ventana */
+  z-index: 100;  /* Asegura que el header esté sobre otros elementos */
 }
 
 /* Navbar */
 nav {
-  display: flex;
-  justify-content: center;  /* Centramos todo el contenido horizontalmente */
-  align-items: center;  /* Centramos el contenido verticalmente */
-  background-color: #ffcc33;
-  padding: 10px 30px;  /* Ajustamos el padding para hacerlo más compacto */
+  display: flex;  /* Utiliza flexbox para la distribución de los elementos */
+  justify-content: center;  /* Centra horizontalmente los elementos del menú */
+  align-items: center;  /* Centra verticalmente los elementos */
+  background-color: #ffcc33;  /* Fondo del navbar en color amarillo */
+  padding: 10px 30px;  /* Espaciado interno en el navbar */
 }
 
 nav ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  align-items: center;  /* Alineamos verticalmente los elementos del menú */
+  display: flex;  /* Flexbox para alinear los ítems del menú */
+  list-style: none;  /* Elimina los puntos de lista */
+  padding: 0;  /* Sin relleno en la lista */
+  margin: 0;  /* Sin márgenes */
+  align-items: center;  /* Alinea verticalmente los ítems del menú */
 }
 
 nav ul li {
-  margin: 0 20px;  /* Espaciamos los enlaces */
+  margin: 0 20px;  /* Espaciado horizontal entre los ítems del menú */
 }
 
 nav ul li a {
-  text-decoration: none;
-  color: #003366;
-  font-weight: bold;
+  text-decoration: none;  /* Elimina el subrayado de los enlaces */
+  color: #003366;  /* Color azul oscuro para los enlaces */
+  font-weight: bold;  /* Los enlaces tienen un texto en negrita */
 }
 
 /* Ajustar el logo en el centro */
 nav .logo {
-  margin: 0 20px;  /* Espacio a los lados del logo para distribuir bien los enlaces */
+  margin: 0 20px;  /* Añade espacio a los lados del logo */
 }
 
 header img.logo {
-  max-width: 150px;  /* Ajustar el tamaño del logo */
-  border-radius: 10px;
-  padding: 5px;
-  background-color: white;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 150px;  /* Ajusta el tamaño máximo del logo */
+  border-radius: 10px;  /* Bordes redondeados en el logo */
+  padding: 5px;  /* Añade espaciado alrededor del logo */
+  background-color: white;  /* Fondo blanco detrás del logo */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Añade una sombra suave alrededor del logo */
 }
 
 /* Hero Section */
 .centroweb {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 25px;
-  padding-left: 100px;
+  display: flex;  /* Flexbox para organizar el contenido en dos partes */
+  justify-content: space-between;  /* Espaciado entre los elementos */
+  align-items: center;  /* Alinea verticalmente */
+  background-color: #ffffff;  /* Fondo blanco */
+  padding: 25px;  /* Espaciado interno */
+  padding-left: 100px;  /* Espaciado a la izquierda */
 }
 
 .centroweb-content {
-  max-width: 50%;
+  max-width: 50%;  /* El contenido ocupa el 50% del ancho */
 }
 
 .centroweb h1 {
-  color: #003366;
-  font-size: 2.5rem;
+  color: #003366;  /* Texto de color azul oscuro */
+  font-size: 2.5rem;  /* Tamaño grande del título */
 }
 
 .centroweb p {
-  font-size: 1.2rem;
-  color: #333;
+  font-size: 1.2rem;  /* Tamaño del párrafo */
+  color: #333;  /* Color de texto gris oscuro */
 }
 
 .centroweb-image img {
-  width: 1300px;
-  height: 500px;
+  width: 1300px;  /* Ancho de la imagen */
+  height: 500px;  /* Altura de la imagen */
 }
 
 .btn-primary {
-  padding: 10px 20px;
-  background-color: #003366;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+  padding: 10px 20px;  /* Espaciado interno del botón */
+  background-color: #003366;  /* Fondo azul oscuro */
+  color: white;  /* Texto en blanco */
+  text-decoration: none;  /* Sin subrayado */
+  border-radius: 5px;  /* Bordes redondeados */
 }
 
 /* Services Section */
 .services {
-  padding: 50px 20px;
-  background-color: white;
-  text-align: center;
+  padding: 50px 20px;  /* Espaciado interno */
+  background-color: white;  /* Fondo blanco */
+  text-align: center;  /* Alineación central del texto */
 }
 
 .services h2 {
-  color: #003366;
+  color: #003366;  /* Color del texto en azul oscuro */
 }
 
 .service-items {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
+  display: flex;  /* Flexbox para alinear los elementos */
+  justify-content: space-around;  /* Espaciado alrededor de los elementos */
+  margin-top: 20px;  /* Espacio superior entre los servicios */
 }
 
 .service-item {
-  background-color: #ffcc33;
-  color: #003366;
-  padding: 20px;
-  border-radius: 10px;
-  width: 30%;
+  background-color: #ffcc33;  /* Fondo amarillo */
+  color: #003366;  /* Texto en azul oscuro */
+  padding: 20px;  /* Espaciado interno */
+  border-radius: 10px;  /* Bordes redondeados */
+  width: 30%;  /* Cada elemento ocupa el 30% del ancho */
 }
 
 /* Accordion (Sección de Servicios) */
 .servicios {
-  padding: 50px;
-  background-color: #fff;
+  padding: 50px;  /* Espaciado interno */
+  background-color: #fff;  /* Fondo blanco */
 }
 
 .servicios h2 {
-  text-align: center;
-  color: #003366;
-  margin-bottom: 20px;
+  text-align: center;  /* Alineación central del título */
+  color: #003366;  /* Color del texto en azul oscuro */
+  margin-bottom: 20px;  /* Margen inferior */
 }
 
 .accordion {
-  max-width: 700px;
-  margin: 0 auto;
+  max-width: 700px;  /* Ancho máximo del acordeón */
+  margin: 0 auto;  /* Centra el acordeón */
 }
 
 .accordion-item {
-  background-color: #f4f4f4;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 20px;
+  background-color: #f4f4f4;  /* Fondo gris claro */
+  border-bottom: 1px solid #ddd;  /* Línea de separación */
+  padding: 10px 20px;  /* Espaciado interno */
 }
 
 .accordion-button {
-  background-color: #003366;
-  color: white;
-  padding: 15px;
-  border: none;
-  text-align: left;
-  width: 100%;
-  cursor: pointer;
+  background-color: #003366;  /* Fondo azul oscuro */
+  color: white;  /* Texto en blanco */
+  padding: 15px;  /* Espaciado interno */
+  border: none;  /* Sin borde */
+  text-align: left;  /* Texto alineado a la izquierda */
+  width: 100%;  /* El botón ocupa todo el ancho */
+  cursor: pointer;  /* El cursor cambia al estilo de puntero */
 }
 
 .accordion-button.active, .accordion-button:hover {
-  background-color: #ffcc33;
-  color: #003366;
+  background-color: #ffcc33;  /* Cambio de color al hacer hover o estar activo */
+  color: #003366;  /* Texto en azul oscuro */
 }
 
 .accordion-content {
-  max-height: 0;  /* Inicia colapsado */
-  overflow: hidden;  /* Oculta el contenido que excede el max-height */
-  transition: max-height 0.4s ease;  /* Aplica la transición suave */
-  padding: 0 15px;
-  color: #333;
+  max-height: 0;  /* Altura inicial colapsada */
+  overflow: hidden;  /* Oculta el contenido que no cabe en el espacio disponible */
+  transition: max-height 0.4s ease;  /* Transición suave para expandir el acordeón */
+  padding: 0 15px;  /* Espaciado interno */
+  color: #333;  /* Color del texto en gris oscuro */
 }
 
 .accordion-content p {
-  margin: 0;
-  padding: 10px 0;
+  margin: 0;  /* Sin márgenes */
+  padding: 10px 0;  /* Espaciado interno en los párrafos */
 }
 
 /* Estilos del footer adaptado */
 /* El footer siempre estará fijo en la parte inferior de la pantalla */
 footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background-color: #003366;
-  color: white;
-  text-align: center;
-  padding: 10px; /* Reduce el padding para hacerlo más pequeño */
-  height: 100px;  /* Establece una altura más pequeña */
-  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;  /* Fija el footer en la parte inferior de la pantalla */
+  bottom: 0;  /* Se asegura de que esté en el borde inferior */
+  left: 0;  /* Se asegura de que esté alineado a la izquierda */
+  width: 100%;  /* El footer ocupa todo el ancho de la pantalla */
+  background-color: #003366;  /* Fondo azul oscuro */
+  color: white;  /* Texto en blanco */
+  text-align: center;  /* Texto alineado en el centro */
+  padding: 10px;  /* Reduce el espaciado interno */
+  height: 100px;  /* Altura del footer */
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);  /* Sombra sutil en la parte superior del footer */
 }
 
-
 footer .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  
+  display: flex;  /* Flexbox para organizar el contenido */
+  justify-content: space-between;  /* Espacio entre los elementos */
+  align-items: center;  /* Alineación vertical */
+  flex-wrap: wrap;  /* Permite que los elementos se ajusten si es necesario */
 }
 
 footer .row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  display: flex;  /* Flexbox para organizar el contenido */
+  justify-content: space-between;  /* Espacio entre los elementos */
+  align-items: center;  /* Alineación vertical */
+  width: 100%;  /* Ocupa todo el ancho disponible */
 }
 
 footer .col-3, .col-6 {
-  padding: 10px;
+  padding: 10px;  /* Espaciado interno en las columnas */
 }
 
 footer .footer-title {
-  font-size: 0.8rem;
-  margin-bottom: 10px;
+  font-size: 0.8rem;  /* Tamaño pequeño del título en el footer */
+  margin-bottom: 10px;  /* Margen inferior */
 }
 
 footer .instagram-photos img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;         
-  padding: 5px;             
-  background-color: white;   
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  
-  transition: transform 0.3s ease;  
+  width: 40px;  /* Ancho de las imágenes de redes sociales */
+  height: 40px;  /* Altura de las imágenes de redes sociales */
+  border-radius: 50%;  /* Bordes redondeados */
+  padding: 5px;  /* Espaciado interno */
+  background-color: white;  /* Fondo blanco detrás de las imágenes */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);  /* Sombra suave alrededor de las imágenes */
+  transition: transform 0.3s ease;  /* Transición suave al hacer hover */
 }
 
 footer .instagram-photos img:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);  /* Aumenta el tamaño de las imágenes al hacer hover */
 }
 
 footer .m-0 {
-  margin: 0;
+  margin: 0;  /* Sin márgenes */
 }
 
 footer .letrachica {
-  font-size: 0.8rem;
+  font-size: 0.8rem;  /* Tamaño pequeño del texto en el footer */
 }
 
 footer .footer-link {
-  color: #ffcc33;
-  text-decoration: none;
+  color: #ffcc33;  /* Color amarillo para los enlaces */
+  text-decoration: none;  /* Sin subrayado en los enlaces */
 }
 
 footer .footer-link:hover {
-  text-decoration: underline;
+  text-decoration: underline;  /* Subraya los enlaces al hacer hover */
 }
 
 /* Sección de Información adicional */
 .informacion {
-  display: flex;
-  justify-content: space-between;
-  background-color: #ffcc33;
+  display: flex;  /* Flexbox para organizar el contenido */
+  justify-content: space-between;  /* Espacio entre los elementos */
+  background-color: #ffcc33;  /* Fondo amarillo */
 }
 
 .info-content h3 {
-  color: #003366;
+  color: #003366;  /* Títulos en azul oscuro */
 }
 
 .info-content ul {
-  list-style: none;
-  padding: 0;
-  color: #333;
+  list-style: none;  /* Sin puntos en la lista */
+  padding: 0;  /* Sin relleno */
+  color: #333;  /* Texto en gris oscuro */
 }
 
 .info-image img {
-  max-width: 100%;
-  height: 175px;
-  padding-bottom: 110px;
-  padding-top: 10px;
+  max-width: 100%;  /* Ancho máximo de la imagen */
+  height: 175px;  /* Altura fija de la imagen */
+  padding-bottom: 110px;  /* Espaciado inferior */
+  padding-top: 10px;  /* Espaciado superior */
 }
+
 .nosotros {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #ffffff;
-  padding: 100px;
-  padding-left: 100px;
+  display: flex;  /* Flexbox para alinear el contenido */
+  justify-content: space-between;  /* Espaciado entre los elementos */
+  align-items: center;  /* Alineación vertical */
+  background-color: #ffffff;  /* Fondo blanco */
+  padding: 100px;  /* Espaciado interno */
+  padding-left: 100px;  /* Espaciado a la izquierda */
 }
+
 .nosotros-content {
-  max-width: 50%;
+  max-width: 50%;  /* El contenido ocupa el 50% del ancho */
 }
+
 .nosotros h1 {
-  color: #003366;
-  font-size: 3.5rem;
+  color: #003366;  /* Títulos en azul oscuro */
+  font-size: 3.5rem;  /* Tamaño grande del título */
 }
 
 .nosotros p {
-  font-size: 1.5rem;
-  color: #333;
+  font-size: 1.5rem;  /* Tamaño grande del párrafo */
+  color: #333;  /* Color de texto gris oscuro */
 }
 
 .nosotros-image img {
-  width: auto;
-  height: 500px;
-  border-radius: 25px;
+  width: auto;  /* Ancho automático */
+  height: 500px;  /* Altura fija de la imagen */
+  border-radius: 25px;  /* Bordes redondeados */
 }
+
 /* Estilos para el botón de usuario (Iniciar sesión) */
 .user-button {
-  position: absolute;
-  right: 20px;
-  top: 20px;
-  background-color: #003366;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  width: 180px;  /* Establece un ancho fijo para ambos botones */
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 1000;
+  position: absolute;  /* Posicionamiento absoluto para ubicar el botón */
+  right: 20px;  /* El botón está alineado a la derecha */
+  top: 20px;  /* El botón está en la parte superior */
+  background-color: #003366;  /* Fondo azul oscuro */
+  color: white;  /* Texto en blanco */
+  border: none;  /* Sin borde */
+  padding: 10px 20px;  /* Espaciado interno */
+  border-radius: 5px;  /* Bordes redondeados */
+  font-size: 16px;  /* Tamaño del texto */
+  cursor: pointer;  /* El cursor cambia al estilo de puntero */
+  display: flex;  /* Flexbox para alinear el contenido */
+  align-items: center;  /* Alineación vertical */
+  width: 180px;  /* Ancho fijo */
+  transition: background-color 0.3s ease, transform 0.2s ease;  /* Transiciones para hover */
+  z-index: 1000;  /* Eleva el botón sobre otros elementos */
 }
 
 .user-button i {
-  margin-right: 10px;
-  font-size: 20px;
+  margin-right: 10px;  /* Espaciado a la derecha del icono */
+  font-size: 20px;  /* Tamaño del icono */
 }
 
 /* Estilos para el botón de registrarse */
 .register-button {
-  position: absolute;
-  right: 20px;
-  top: 70px;
-  background-color: #003366;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  width: 180px;  /* Asegura el mismo ancho para el botón de registro */
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  z-index: 1000;
+  position: absolute;  /* Posicionamiento absoluto para ubicar el botón */
+  right: 20px;  /* El botón está alineado a la derecha */
+  top: 70px;  /* El botón está debajo del botón de iniciar sesión */
+  background-color: #003366;  /* Fondo azul oscuro */
+  color: white;  /* Texto en blanco */
+  border: none;  /* Sin borde */
+  padding: 10px 20px;  /* Espaciado interno */
+  border-radius: 5px;  /* Bordes redondeados */
+  font-size: 16px;  /* Tamaño del texto */
+  cursor: pointer;  /* El cursor cambia al estilo de puntero */
+  display: flex;  /* Flexbox para alinear el contenido */
+  align-items: center;  /* Alineación vertical */
+  width: 180px;  /* Ancho fijo */
+  transition: background-color 0.3s ease, transform 0.2s ease;  /* Transiciones para hover */
+  z-index: 1000;  /* Eleva el botón sobre otros elementos */
 }
 
 .register-button i {
-  margin-right: 10px;
-  font-size: 20px;
+  margin-right: 10px;  /* Espaciado a la derecha del icono */
+  font-size: 20px;  /* Tamaño del icono */
 }
 
 /* Hover para ambos botones */
 .user-button:hover, .register-button:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);  /* Aumenta el tamaño del botón al hacer hover */
 }
 
 .user-button:hover {
-  background-color: #005599;
+  background-color: #005599;  /* Fondo azul más claro al hacer hover */
 }
 
 .register-button:hover {
-  background-color: #1C569B;
+  background-color: #1C569B;  /* Fondo azul más claro al hacer hover */
 }
+
+/* Estilos adicionales para formularios de login, contacto y registro */
+
 /* Sección de Login */
 .login-section {
-  padding: 50px 20px;
-  background-color: #f4f4f4;
-  text-align: center;
+  padding: 50px 20px;  /* Espaciado interno */
+  background-color: #f4f4f4;  /* Fondo gris claro */
+  text-align: center;  /* Alineación central del contenido */
 }
 
 .login-container {
-  max-width: 600px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;  /* Ancho máximo del contenedor de login */
+  margin: 0 auto;  /* Centra el contenedor de login */
+  background-color: white;  /* Fondo blanco */
+  padding: 40px;  /* Espaciado interno */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);  /* Sombra suave */
 }
 
 .login-title h1 {
-  color: #003366;
-  font-size: 3rem;
-  margin-bottom: 40px;
+  color: #003366;  /* Título en azul oscuro */
+  font-size: 3rem;  /* Tamaño del título */
+  margin-bottom: 40px;  /* Margen inferior */
 }
 
 .login-form {
-  width: 100%;
-  text-align: left;
+  width: 100%;  /* Formulario ocupa todo el ancho */
+  text-align: left;  /* Alineación izquierda del formulario */
 }
 
 .login-form h3 {
-  font-size: 1.5rem;
-  color: #003366;
-  margin-bottom: 20px;
+  font-size: 1.5rem;  /* Tamaño del subtítulo */
+  color: #003366;  /* Color del subtítulo */
+  margin-bottom: 20px;  /* Margen inferior */
 }
 
 .login-form input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  width: 100%;  /* Los campos de entrada ocupan todo el ancho */
+  padding: 12px;  /* Espaciado interno */
+  margin-bottom: 20px;  /* Margen inferior */
+  border: 1px solid #ccc;  /* Borde gris claro */
+  border-radius: 5px;  /* Bordes redondeados */
+  font-size: 1rem;  /* Tamaño del texto */
 }
+
 .login-remember {
-  display: flex;
-  align-items: center; /* Alinea el checkbox y el texto verticalmente en el centro */
-  justify-content: flex-start; /* Alinea el contenido a la izquierda */
-  margin-bottom: 10px;
+  display: flex;  /* Flexbox para alinear los elementos */
+  align-items: center;  /* Alinea verticalmente el checkbox y el texto */
+  justify-content: flex-start;  /* Alinea a la izquierda */
+  margin-bottom: 10px;  /* Margen inferior */
 }
 
 .login-remember input {
-  margin-right: 10px; /* Espacio entre el checkbox y la etiqueta */
-  justify-content: flex-start; /* Alinea el contenido a la izquierda */
+  margin-right: 10px;  /* Espaciado a la derecha del checkbox */
 }
 
 .forgot-password {
-  color: #003366;
-  text-decoration: none;
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-  display: inline-block;
+  color: #003366;  /* Enlace de "Olvidé mi contraseña" en azul oscuro */
+  text-decoration: none;  /* Sin subrayado en el enlace */
+  font-size: 0.9rem;  /* Tamaño del texto */
+  margin-bottom: 20px;  /* Margen inferior */
+  display: inline-block;  /* Se comporta como un bloque en línea */
 }
 
 .forgot-password:hover {
-  text-decoration: underline;
+  text-decoration: underline;  /* Subraya el enlace al hacer hover */
 }
 
 .login-form button {
-  background-color: #003366;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  width: 100%; /* Botón ancho */
+  background-color: #003366;  /* Fondo azul oscuro */
+  color: white;  /* Texto en blanco */
+  border: none;  /* Sin borde */
+  padding: 12px 20px;  /* Espaciado interno */
+  font-size: 1rem;  /* Tamaño del texto */
+  cursor: pointer;  /* El cursor cambia al estilo de puntero */
+  border-radius: 5px;  /* Bordes redondeados */
+  transition: background-color 0.3s ease;  /* Transición suave al hacer hover */
+  width: 100%;  /* El botón ocupa todo el ancho */
 }
 
 .login-form button:hover {
-  background-color: #002244;
+  background-color: #002244;  /* Fondo más oscuro al hacer hover */
 }
 
 /* Sección de Contacto */
 .contact-section {
-  padding: 50px 20px;
-  background-color: #f4f4f4;
-  text-align: center;
+  padding: 50px 20px;  /* Espaciado interno */
+  background-color: #f4f4f4;  /* Fondo gris claro */
+  text-align: center;  /* Alineación central */
 }
 
 .contact-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
+  max-width: 1200px;  /* Ancho máximo del contenedor de contacto */
+  margin: 0 auto;  /* Centra el contenedor de contacto */
+  display: flex;  /* Flexbox para organizar los elementos */
+  justify-content: space-between;  /* Espaciado entre los elementos */
+  align-items: flex-start;  /* Alineación superior */
+  gap: 20px;  /* Espaciado entre los elementos */
+  flex-wrap: wrap;  /* Permite que los elementos se ajusten si es necesario */
 }
 
 .contact-content {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+  display: flex;  /* Flexbox para organizar el contenido */
+  justify-content: space-between;  /* Espaciado entre los elementos */
+  width: 100%;  /* El contenedor ocupa todo el ancho */
 }
 
 .contact-form {
-  width: 60%;
-  background-color: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  width: 60%;  /* El formulario ocupa el 60% del ancho */
+  background-color: white;  /* Fondo blanco */
+  padding: 30px;  /* Espaciado interno */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);  /* Sombra suave */
 }
 
 .contact-form h3 {
-  font-size: 1.5rem;
-  color: #003366;
-  margin-bottom: 20px;
+  font-size: 1.5rem;  /* Tamaño del título */
+  color: #003366;  /* Color del título */
+  margin-bottom: 20px;  /* Margen inferior */
 }
 
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  width: 100%;  /* Campos de entrada ocupan todo el ancho */
+  padding: 10px;  /* Espaciado interno */
+  margin-bottom: 20px;  /* Margen inferior */
+  border: 1px solid #ccc;  /* Borde gris claro */
+  border-radius: 5px;  /* Bordes redondeados */
+  font-size: 1rem;  /* Tamaño del texto */
 }
 
 .contact-form textarea {
-  resize: none;
+  resize: none;  /* Desactiva el redimensionamiento del textarea */
 }
 
 .contact-details {
-  width: 35%;
-  padding: 30px;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  width: 35%;  /* Los detalles de contacto ocupan el 35% del ancho */
+  padding: 30px;  /* Espaciado interno */
+  background-color: white;  /* Fondo blanco */
+  border-radius: 10px;  /* Bordes redondeados */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);  /* Sombra suave */
 }
 
 .contact-details h3,
 .contact-details h4 {
-  font-size: 1.5rem;
-  color: #003366;
-  margin-bottom: 10px;
+  font-size: 1.5rem;  /* Tamaño del título */
+  color: #003366;  /* Color del título */
+  margin-bottom: 10px;  /* Margen inferior */
 }
 
 .contact-details p {
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 1rem;  /* Tamaño del texto */
+  color: #333;  /* Color gris oscuro para el texto */
+  margin-bottom: 10px;  /* Margen inferior */
 }
 
-/* Botón de envío */
+/* Botón de envío en el formulario de contacto */
 .contact-form .btn-primary {
-  background-color: #003366;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  background-color: #003366;  /* Fondo azul oscuro */
+  color: white;  /* Texto en blanco */
+  border: none;  /* Sin borde */
+  padding: 12px 20px;  /* Espaciado interno */
+  font-size: 1rem;  /* Tamaño del texto */
+  cursor: pointer;  /* El cursor cambia al estilo de puntero */
+  border-radius: 5px;  /* Bordes redondeados */
+  transition: background-color 0.3s ease;  /* Transición suave al hacer hover */
 }
 
 .contact-form .btn-primary:hover {
-  background-color: #002244;
+  background-color: #002244;  /* Fondo más oscuro al hacer hover */
 }
+
 /* Sección de Registro */
 .register-section {
-  padding: 50px 20px;
-  background-color: #f4f4f4;
-  text-align: center;
+  padding: 50px 20px;  /* Espaciado interno */
+  background-color: #f4f4f4;  /* Fondo gris claro */
+  text-align: center;  /* Alineación central */
 }
-
+/* Contenedor del formulario de registro */
 .register-container {
-  max-width: 900px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 40px;
-  padding-bottom: 150px;
-  border-radius: 10px;
-  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 900px; /* Ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor */
+  background-color: white; /* Fondo blanco para el contenedor */
+  padding: 40px; /* Espaciado interno de 40px alrededor */
+  padding-bottom: 150px; /* Espaciado inferior mayor de 150px */
+  border-radius: 10px; /* Bordes redondeados de 10px */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor del contenedor */
 }
 
+/* Título del formulario de registro */
 .register-title h1 {
-  color: #003366;
-  font-size: 3rem;
-  margin-bottom: 40px;
+  color: #003366; /* Color azul oscuro para el título */
+  font-size: 3rem; /* Tamaño grande del título (3 rem) */
+  margin-bottom: 40px; /* Margen inferior de 40px */
 }
 
+/* Estilos generales para el formulario de registro */
 .register-form {
-  width: 100%;
-  text-align: left;
+  width: 100%; /* El formulario ocupa el 100% del ancho disponible */
+  text-align: left; /* Alineación del texto a la izquierda */
 }
 
+/* Estilos para los subtítulos dentro del formulario de registro */
 .register-form h3 {
-  font-size: 1.5rem;
-  color: #003366;
-  margin-bottom: 20px;
+  font-size: 1.5rem; /* Tamaño de letra del subtítulo (1.5 rem) */
+  color: #003366; /* Color azul oscuro para los subtítulos */
+  margin-bottom: 20px; /* Margen inferior de 20px */
 }
 
+/* Estilos generales para los campos de entrada y select */
 .register-form input,
 .register-form select {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
+  width: 100%; /* Los inputs ocupan el 100% del ancho disponible */
+  padding: 12px; /* Espaciado interno de 12px */
+  margin-bottom: 20px; /* Margen inferior de 20px */
+  border: 1px solid #ccc; /* Borde gris claro de 1px */
+  border-radius: 5px; /* Bordes redondeados de 5px */
+  font-size: 1rem; /* Tamaño de la letra dentro del input */
 }
 
+/* Ajuste específico para campos de fecha */
 .register-form input[type="date"] {
-  padding: 10px;
+  padding: 10px; /* Espaciado interno específico de 10px para los campos de fecha */
 }
 
+/* Estilos para el botón de envío del formulario de registro */
 .register-form button {
-  background-color: #003366;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  width: 100%; /* Botón ancho */
+  background-color: #003366; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 12px 20px; /* Espaciado interno de 12px arriba y abajo, 20px a los lados */
+  font-size: 1rem; /* Tamaño del texto en el botón */
+  cursor: pointer; /* Muestra el puntero de mano al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados de 5px */
+  transition: background-color 0.3s ease; /* Transición suave al hacer hover */
+  width: 100%; /* El botón ocupa el 100% del ancho disponible */
 }
 
+/* Efecto hover para el botón de envío */
 .register-form button:hover {
-  background-color: #002244;
+  background-color: #002244; /* Cambia el color de fondo a un azul más oscuro al hacer hover */
 }
+
+/* Sección para el formulario de solicitud de servicio */
+.service-request-section {
+  padding: 50px 20px; /* Espaciado interno de 50px arriba/abajo y 20px a los lados */
+  background-color: #f4f4f4; /* Fondo gris claro */
+  text-align: center; /* Alineación central del texto */
+}
+
+/* Contenedor del formulario de solicitud de servicio */
+.service-request-container {
+  max-width: 900px; /* Ancho máximo de 900px */
+  margin: 0 auto; /* Centra el contenedor */
+  background-color: white; /* Fondo blanco */
+  padding: 40px; /* Espaciado interno de 40px */
+  border-radius: 10px; /* Bordes redondeados de 10px */
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil alrededor del contenedor */
+}
+
+/* Estilos para el título del formulario de solicitud de servicio */
+.service-request-title h1 {
+  color: #003366; /* Color azul oscuro */
+  font-size: 3rem; /* Tamaño grande del título */
+  margin-bottom: 40px; /* Margen inferior de 40px */
+}
+
+/* Estilos generales del formulario de solicitud de servicio */
+.service-request-form {
+  width: 100%; /* El formulario ocupa el 100% del ancho disponible */
+  text-align: left; /* Alineación izquierda del texto */
+}
+
+/* Estilos para los subtítulos dentro del formulario de solicitud de servicio */
+.service-request-form h3 {
+  font-size: 1.5rem; /* Tamaño de letra del subtítulo (1.5 rem) */
+  color: #003366; /* Color azul oscuro */
+  margin-bottom: 20px; /* Margen inferior de 20px */
+}
+
+/* Estilos generales para los campos de entrada, select y textarea */
+.service-request-form input,
+.service-request-form select,
+.service-request-form textarea {
+  width: 100%; /* Los campos ocupan el 100% del ancho disponible */
+  padding: 12px; /* Espaciado interno de 12px */
+  margin-bottom: 20px; /* Margen inferior de 20px */
+  border: 1px solid #ccc; /* Borde gris claro de 1px */
+  border-radius: 5px; /* Bordes redondeados de 5px */
+  font-size: 1rem; /* Tamaño de letra dentro de los campos */
+}
+
+/* Estilos para el textarea (campo de texto de varias líneas) */
+.service-request-form textarea {
+  resize: none; /* Desactiva la capacidad de redimensionar el textarea */
+}
+
+/* Estilos para el botón de envío del formulario de solicitud de servicio */
+.service-request-form button {
+  background-color: #003366; /* Fondo azul oscuro */
+  color: white; /* Texto blanco */
+  border: none; /* Sin borde */
+  padding: 12px 20px; /* Espaciado interno de 12px arriba/abajo, 20px a los lados */
+  font-size: 1rem; /* Tamaño de letra */
+  cursor: pointer; /* Muestra el puntero de mano al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados de 5px */
+  transition: background-color 0.3s ease; /* Transición suave al hacer hover */
+  width: 100%; /* El botón ocupa el 100% del ancho disponible */
+}
+
+/* Efecto hover para el botón de envío */
+.service-request-form button:hover {
+  background-color: #002244; /* Cambia el fondo a un azul más oscuro al hacer hover */
+}
+
 
 

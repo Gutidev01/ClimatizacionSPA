@@ -1,40 +1,74 @@
-// Carga el navbar y el footer desde sus respectivos archivos HTML
+// Cargar el navbar y el footer desde archivos externos
 window.onload = function() {
     loadComponent("navbar", "components/navbar.html");
     loadComponent("footer", "components/footer.html");
+
     setupAccordion();
+
+    // Establecer la fecha actual en el campo de fecha "fecha-solicitud"
+    const fechaHoy = new Date().toISOString().split('T')[0];
+    const fechaSolicitudElement = document.getElementById('fecha-solicitud');
+
+    if (fechaSolicitudElement) {
+        fechaSolicitudElement.value = fechaHoy;
+    }
+
+    // Obtener el tipo de solicitud desde la URL (si está presente)
+    const urlParams = new URLSearchParams(window.location.search);
+    const tipoSolicitud = urlParams.get('tipo');
+
+    if (tipoSolicitud) {
+        const selectElement = document.getElementById('tipo-solicitud');
+        if (selectElement) {
+            const optionToSelect = Array.from(selectElement.options).find(
+                option => option.value.toLowerCase() === tipoSolicitud.toLowerCase()
+            );
+            if (optionToSelect) {
+                optionToSelect.selected = true;
+            }
+        }
+    }
 };
 
-// Función para cargar componentes externos (navbar y footer)
+// Función mejorada para cargar componentes externos como navbar y footer
 function loadComponent(elementId, filePath) {
     fetch(filePath)
-        .then(response => response.text())
-        .then(data => document.getElementById(elementId).innerHTML = data);
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar el componente: ' + filePath);
+            }
+            return response.text();
+        })
+        .then(data => {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.innerHTML = data;
+            } else {
+                console.error('Elemento con ID ' + elementId + ' no encontrado');
+            }
+        })
+        .catch(error => console.error(error));
 }
 
-// Función para configurar el acordeón
+// Configurar el comportamiento del acordeón
 function setupAccordion() {
     const accordions = document.querySelectorAll('.accordion-button');
-
     accordions.forEach(button => {
         button.addEventListener('mouseover', () => {
             const content = button.nextElementSibling;
             button.classList.add('active');
-            content.style.maxHeight = content.scrollHeight + "px";  // Ajustamos la altura máxima según el contenido
+            content.style.maxHeight = content.scrollHeight + "px";
         });
-
         button.addEventListener('mouseout', () => {
             const content = button.nextElementSibling;
             button.classList.remove('active');
-            content.style.maxHeight = "0";  // Colapsamos el contenido
+            content.style.maxHeight = "0";
         });
     });
 }
 
-
-// Aquí puedes agregar interacciones como desplazamiento suave o animaciones
+// Añadir smooth scroll para los enlaces con anclas
 document.addEventListener('DOMContentLoaded', function() {
-    // Añadir smooth scroll al hacer clic en los links de navegación
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();

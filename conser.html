@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Servicio</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace a tu CSS -->
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div id="navbar"></div>
+    </header>
+
+    <!-- Sección de Solicitud de Servicio -->
+     <!-- Sección de Solicitud de Servicio -->
+     <section class="service-request-section">
+        <div class="service-request-container">
+            <div class="service-request-title">
+                <h1>Solicitud de Servicio</h1>
+            </div>
+            <div class="service-request-form">
+                <h3>Rellena el formulario para solicitar un servicio</h3>
+                <form>
+                    <input type="text" placeholder="Marca del Aparato" required>
+                    <input type="text" placeholder="Modelo del Aparato" required>
+                    <select id="tipo-solicitud" required>
+                        <option value="" disabled selected>Selecciona el Tipo de Solicitud</option>
+                        <option value="mantenimiento">Mantenimiento</option>
+                        <option value="reparacion">Reparación</option>
+                        <option value="instalacion">Instalación</option>
+                        <option value="remocion">Remoción</option>
+                    </select>
+                    <input type="text" placeholder="Dirección" required>
+                    <input type="date" id="fecha-solicitud" required>
+                    <textarea placeholder="Descripción del problema o solicitud" rows="5" required></textarea>
+                    <button type="submit" class="btn-primary">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+        <div id="footer"></div>
+
+    <!-- JavaScript -->
+        <script src="js/scripts.js"></script>
+</body>
+</html>
