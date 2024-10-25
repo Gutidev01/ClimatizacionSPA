@@ -96,6 +96,18 @@ app.post('/login', (req, res) => {
   });
 });
 
+// Ruta para obtener las marcas y modelos desde la base de datos
+app.get('/api/productos', (req, res) => {
+  const sql = 'SELECT DISTINCT marca, modelo FROM productos ORDER BY marca, modelo';
+  db.query(sql, (err, results) => {
+    if (err) {
+      console.error('Error al obtener marcas y modelos:', err);
+      return res.status(500).json({ message: 'Error al obtener productos' });
+    }
+    res.json(results);
+  });
+});
+
 // Iniciar el servidor en el puerto 3000
 const PORT = 3000;
 app.listen(PORT, () => {

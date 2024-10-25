@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- Enlace a tu CSS -->
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Header con logo y navegación -->
     <header>
         <div id="navbar"></div>
     </header>
 
     <!-- Sección de Solicitud de Servicio -->
-     <!-- Sección de Solicitud de Servicio -->
-     <section class="service-request-section">
+    <section class="service-request-section">
         <div class="service-request-container">
             <div class="service-request-title">
                 <h1>Solicitud de Servicio</h1>
@@ -22,8 +21,21 @@
             <div class="service-request-form">
                 <h3>Rellena el formulario para solicitar un servicio</h3>
                 <form>
-                    <input type="text" placeholder="Marca del Aparato" required>
-                    <input type="text" placeholder="Modelo del Aparato" required>
+                    <!-- Select para la marca -->
+                    <label for="marca">Marca del Aparato:</label>
+                    <select id="marca" name="marca" required>
+                        <option value="" disabled selected>Seleccionar Marca</option>
+                        <!-- Opciones dinámicas desde la base de datos -->
+                    </select>
+
+                    <!-- Select para el modelo -->
+                    <label for="modelo">Modelo del Aparato:</label>
+                    <select id="modelo" name="modelo" required>
+                        <option value="" disabled selected>Seleccionar Modelo</option>
+                        <!-- Opciones dinámicas basadas en la marca seleccionada -->
+                    </select>
+
+                    <label for="tipo-solicitud">Tipo de Solicitud:</label>
                     <select id="tipo-solicitud" required>
                         <option value="" disabled selected>Selecciona el Tipo de Solicitud</option>
                         <option value="mantenimiento">Mantenimiento</option>
@@ -31,18 +43,21 @@
                         <option value="instalacion">Instalación</option>
                         <option value="remocion">Remoción</option>
                     </select>
+
                     <input type="text" placeholder="Dirección" required>
                     <input type="date" id="fecha-solicitud" required>
                     <textarea placeholder="Descripción del problema o solicitud" rows="5" required></textarea>
-                    <button type="submit" class="btn-primary">Enviar Solicitud</button>
+                    <button type="submit" class="btn-primary">Continuar al pago</button>
                 </form>
             </div>
         </div>
     </section>
+
     <!-- Footer -->
-        <div id="footer"></div>
+    <div id="footer"></div>
 
     <!-- JavaScript -->
-        <script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/conser.js"></script>
 </body>
 </html>
