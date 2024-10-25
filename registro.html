@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro</title>
     <link rel="stylesheet" href="css/styles.css"> <!-- Enlace a tu CSS principal -->
-    <script src="js/register.js"></script> <!-- Aquí está tu script personalizado -->
-    <!-- Cargar el archivo general.js para funcionalidades globales -->
+    <!-- JavaScript -->
     <script src="js/scripts.js" defer></script>
+    <script src="js/register.js" defer></script> <!-- Archivo de JS para el registro -->
 </head>
 <body>
     <!-- Navbar -->
@@ -23,24 +23,25 @@
             </div>
             <div class="register-form">
                 <h3>Formulario de Registro</h3>
-                <form>
-                    <input type="text" placeholder="RUT" required>
-                    <input type="text" placeholder="Nombres" required>
-                    <input type="text" placeholder="Apellidos" required>
-                    <select required>
+                <!-- Eliminé el atributo action para dejar que JavaScript maneje el envío -->
+                <form id="registerForm">
+                    <input type="text" name="rut" placeholder="RUT" required>
+                    <input type="text" name="nombres" placeholder="Nombres" required>
+                    <input type="text" name="apellidos" placeholder="Apellidos" required>
+                    <select name="user_tipo" required>
                         <option value="" disabled selected>Tipo de Usuario</option>
                         <option value="cliente">Cliente</option>
                         <option value="gestor">Técnico</option>
                         <option value="administrador">Administrador</option>
                     </select>
-                    <input type="email" placeholder="Email" required>
-                    <input type="tel" placeholder="Teléfono" required>
-                    <input type="text" placeholder="Dirección" required>
-                    <input type="text" placeholder="Comuna" required>
-                    <input type="text" placeholder="Región" required>
-                    <input type="date" required>
-                    <input type="password" placeholder="Contraseña" required>
-                    <input type="password" placeholder="Confirmar Contraseña" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="telefono" placeholder="Teléfono" required>
+                    <input type="text" name="direccion" placeholder="Dirección" required>
+                    <input type="text" name="comuna" placeholder="Comuna" required>
+                    <input type="text" name="region" placeholder="Región" required>
+                    <input type="date" name="fecha_nacimiento" required>
+                    <input type="password" name="contraseña" placeholder="Contraseña" required>
+                    <input type="password" name="confirmar_contraseña" placeholder="Confirmar Contraseña" required>
                     <button type="submit" class="btn-primary">Registrarse</button>
                 </form>
             </div>
@@ -49,6 +50,5 @@
 
     <!-- Footer -->
     <div id="footer"></div>
-
 </body>
 </html>

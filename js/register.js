@@ -1,42 +1,5 @@
-// Cargar el SDK de Supabase desde el CDN en tu HTML (asegúrate de tener la línea en tu HTML):
-// <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.0.0/dist/supabase.min.js"></script>
-
-// Inicializar Supabase
-const supabaseUrl = "https://xuhfzsxwmiqkldbsvswq.supabase.co";  // Reemplaza con tu URL de Supabase
-const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inh1aGZ6c3h3bWlxa2xkYnN2c3dxIiwicm9sSI6ImFub24iLCJpYXQiOjE3Mjk4MTM3MTcsImV4cCI6MjA0NTM4OTcxN30.lmcJ4Mlti9FmXds1fj6IeBRPFnlFSGXPl2XguAwVyLw";  // Reemplaza con tu clave pública (anon key)
-const supabase = supabase.createClient(supabaseUrl, supabaseKey);
-
-// Función para insertar un nuevo usuario
-async function insertarUsuario(rut, nombres, apellidos, user_tipo, email, telefono, direccion, comuna, region, fecha_nacimiento, contraseña) {
-    const { data, error } = await supabase
-        .from('usuarios')
-        .insert([
-            {
-                rut: rut,
-                nombres: nombres,
-                apellidos: apellidos,
-                user_tipo: user_tipo,
-                email: email,
-                telefono: telefono,
-                direccion: direccion,
-                comuna: comuna,
-                region: region,
-                fecha_nacimiento: fecha_nacimiento,
-                contraseña: contraseña
-            }
-        ]);
-
-    if (error) {
-        console.error('Error insertando el usuario:', error);
-        alert('Error al registrar el usuario. Inténtalo de nuevo.');
-    } else {
-        console.log('Usuario insertado con éxito:', data);
-        alert('Usuario registrado exitosamente.');
-    }
-}
-
 // Función para capturar los datos del formulario y registrar al usuario
-function registrarUsuario(event) {
+async function registrarUsuario(event) {
     event.preventDefault();  // Evita el refresco de la página
 
     // Capturar datos del formulario
@@ -59,8 +22,45 @@ function registrarUsuario(event) {
         return;  // Detener el proceso si las contraseñas no coinciden
     }
 
-    // Llamar a la función para insertar el usuario en Supabase
-    insertarUsuario(rut, nombres, apellidos, user_tipo, email, telefono, direccion, comuna, region, fecha_nacimiento, contraseña);
+    // Preparar los datos en formato JSON
+    const data = {
+        rut: rut,
+        nombres: nombres,
+        apellidos: apellidos,
+        user_tipo: user_tipo,
+        email: email,
+        telefono: telefono,
+        direccion: direccion,
+        comuna: comuna,
+        region: region,
+        fecha_nacimiento: fecha_nacimiento,
+        contraseña: contraseña
+    };
+
+    // Enviar los datos al servidor usando fetch para registrar al usuario en MySQL
+    try {
+        const response = await fetch('http://localhost:3000/register', {  // Asegúrate de que esta URL sea correcta
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        if (response.ok) {
+            alert('Usuario registrado con éxito');
+            // Limpiar el formulario después del registro exitoso
+            document.querySelector('form').reset();
+            // Redirigir al usuario a la página de inicio
+            window.location.href = 'index.html';  // Cambia 'index.html' por la ruta correcta de tu página de inicio
+        } else {
+            const errorMsg = await response.text();
+            alert(`Error: ${errorMsg}`);
+        }
+    } catch (error) {
+        console.error('Error al registrar el usuario:', error);
+        alert('Ocurrió un error al intentar registrar el usuario. Por favor, inténtelo de nuevo más tarde.');
+    }
 }
 
 // Asignar el evento de submit al formulario de registro
@@ -69,25 +69,29 @@ if (registerForm) {
     registerForm.addEventListener('submit', registrarUsuario);
 }
 
+// Función para gestionar la transacción de pago con Flow
+async function iniciarTransaccion() {
+    try {
+        const response = await fetch('https://www.flow.cl/api/payment/create', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer {TOKEN_API}',  // Reemplaza con tu token de API de Flow
+            },
+            body: JSON.stringify({
+                commerceOrder: 'ORD123',  // ID de la orden
+                subject: 'Pago de servicios',  // Descripción del pago
+                amount: 50000,  // Monto en CLP
+                email: 'email@cliente.com',
+                urlReturn: 'https://tusitio.com/pago-exitoso',  // URL de retorno tras pago exitoso
+                urlConfirmation: 'https://tusitio.com/api/confirmacion',  // URL para confirmación del pago
+            })
+        });
 
-
-fetch('https://www.flow.cl/api/payment/create', {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer {TOKEN_API}',  // Reemplaza con tu token de API de Flow
-    },
-    body: JSON.stringify({
-        commerceOrder: 'ORD123',
-        subject: 'Pago de servicios',
-        amount: 50000,  // Monto en CLP
-        email: 'email@cliente.com',
-        urlReturn: 'https://tusitio.com/pago-exitoso',
-        urlConfirmation: 'https://tusitio.com/api/confirmacion',
-    })
-})
-    .then(response => response.json())
-    .then(data => {
-        window.location.href = data.url;  // Redirigir al checkout de Flow
-    })
-    .catch(error => console.error('Error en la transacción:', error));
+        const data = await response.json();
+        window.location.href = data.url;  // Redirigir al checkout de Flow para completar el pago
+    } catch (error) {
+        console.error('Error en la transacción:', error);
+        alert('Ocurrió un error durante la transacción de pago. Inténtelo de nuevo más tarde.');
+    }
+}
